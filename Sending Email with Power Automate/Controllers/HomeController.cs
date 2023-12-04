@@ -32,7 +32,7 @@ namespace Sending_Email_with_Power_Automate.Controllers
                 var client = new HttpClient();
                 var content = new StringContent(JsonConvert.SerializeObject(model), Encoding.UTF8, "application/json");
 
-                HttpResponseMessage response = await client.PostAsync("https://prod-108.westus.logic.azure.com:443/workflows/3c15a625b7084931861ceb08e30233b3/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=bM5bCTenm8OvyPMO95FksZTFRsyCZ14fTYxNf8xWe4g", content);
+                HttpResponseMessage response = await client.PostAsync("Insert URL from Power Automate", content);
 
                 if (response.IsSuccessStatusCode)
                 {
